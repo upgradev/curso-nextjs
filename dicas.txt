@@ -1,0 +1,5 @@
+----criar um projeto novo
+npx create-next-app nomedoprojeto
+
+----rodar o projeto
+yarn dev
