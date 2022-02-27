@@ -3,3 +3,10 @@ npx create-next-app nomedoprojeto
 
 ----rodar o projeto
 yarn dev
+
+--- integrar projeto ja feito com typescript
+criar na raiz do projeto o arquivo tsconfig.json
+depois instalar
+yarn add --dev typescript @types/react @types/node
+depois rode o projeto e o arquivo vai ser preenchido
+
