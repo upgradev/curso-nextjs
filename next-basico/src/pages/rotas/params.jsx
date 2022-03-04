@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import React from "react";
 
-export default function params() {
+export default function Params() {
   const router = useRouter();
 
   const id = router.query.id;
@@ -14,7 +14,7 @@ export default function params() {
       <h1>
         Rotas params: {id} {nome}
       </h1>
-      <Link href={"/rotas"}>
+      <Link href={"/rotas"} passHref>
         <button>Voltar</button>
       </Link>
     </div>

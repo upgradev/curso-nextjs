@@ -2,7 +2,7 @@ import Link from "next/link";
 import router, { useRouter } from "next/router";
 import React from "react";
 
-export default function index() {
+export default function Rotas() {
   
   function navegacaoSimples(url) {
     router.push(url);
@@ -22,13 +22,13 @@ export default function index() {
     <div>
       <h1>Rotas Index</h1>
       <ul>
-        <Link href={"/rotas/params?id=12&nome=Ana"}>
+        <Link href={"/rotas/params?id=12&nome=Ana"} passHref>
           <li>Params</li>
         </Link>
-        <Link href={"/rotas/123/buscar"}>
+        <Link href={"/rotas/123/buscar"} passHref>
           <li>Buscar</li>
         </Link>
-        <Link href={"/rotas/123/daniel"}>
+        <Link href={"/rotas/123/daniel"} passHref>
           <li>daniel</li>
         </Link>
       </ul>
