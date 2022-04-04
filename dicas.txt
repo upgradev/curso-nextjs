@@ -12,4 +12,7 @@ depois rode o projeto e o arquivo vai ser preenchido
 
 yarn start : primeiro rode o comando yarn build e depois o yarn start
 
-rota dinamica -> envolver a pasta com [] por exemplo [id]
+-------rota dinamica 
+envolver a pasta com [] por exemplo [id]
+
+
