@@ -1,35 +1,36 @@
 import Link from "next/link";
-import router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import React from "react";
 
 export default function Rotas() {
-  
-  function navegacaoSimples(url) {
-    router.push(url);
-  }
+  const router = useRouter();
 
-  function navegacaoComParams() {
+  const navegacaoSimples = (url) => {
+    router.push(url);
+  };
+
+  const navegacaoComParams = () => {
     router.push({
       pathname: "/rotas/params",
       query: {
         id: 123,
-        nome: "Ana",
-      },
+        nome: "ana teste"
+      }
     });
-  }
+  };
 
   return (
     <div>
       <h1>Rotas Index</h1>
       <ul>
-        <Link href={"/rotas/params?id=12&nome=Ana"} passHref>
-          <li>Params</li>
+        <Link href={"/rotas/params?id=123&nome=Ana"}>
+          <li> Params </li>
         </Link>
-        <Link href={"/rotas/123/buscar"} passHref>
-          <li>Buscar</li>
+        <Link href={"/rotas/123/buscar"}>
+          <li> Buscar </li>
         </Link>
-        <Link href={"/rotas/123/daniel"} passHref>
-          <li>daniel</li>
+        <Link href={"/rotas/123/ana"}>
+          <li> Params id e nome </li>
         </Link>
       </ul>
       <div
@@ -39,11 +40,10 @@ export default function Rotas() {
           alignItems: "flex-start",
         }}
       >
-        <button onClick={navegacaoComParams}>Params</button>
         <button onClick={() => router.push("/rotas/123/buscar")}>Buscar</button>
-        <button onClick={() => navegacaoSimples("/rotas/123/daniel")}>
-          daniel
-        </button>
+        <button onClick={() => navegacaoSimples("/rotas/123/ana")}>Params id e nome</button>
+        <button onClick={() => navegacaoComParams()}>Params</button>
+
       </div>
     </div>
   );

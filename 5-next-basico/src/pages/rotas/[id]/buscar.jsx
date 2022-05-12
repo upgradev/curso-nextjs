@@ -4,15 +4,13 @@ import React from "react";
 
 export default function Buscar() {
   const router = useRouter();
-  const codigo = router.query.codigo;
-
+  // const codigo = +router.query.id; numeros
+  const codigo = router.query.id;
   return (
     <div>
-      <h1>Rotas / {codigo} / buscar!!!!!</h1>
+      <h1>Rotas / {codigo} / Buscar</h1>
       <Link href={"/rotas"}>
-        <a>
-          <button>Voltar</button>
-        </a>
+        <button> Voltar </button>
       </Link>
     </div>
   );
