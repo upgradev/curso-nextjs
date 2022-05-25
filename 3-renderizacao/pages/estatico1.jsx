@@ -1,11 +1,11 @@
 import React from "react";
 
 export default function Estatico1() {
-  // const [num, setNum] = useState(0);
+//   const [num, setNum] = useState(0);
 
-  // useEffect(() => {
-  //   setNum(Math.random());
-  // }, []);
+//   useEffect(() => {
+//     setNum(Math.random());
+//   }, []);
 
   return (
     <div>

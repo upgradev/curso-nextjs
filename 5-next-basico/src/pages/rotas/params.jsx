@@ -13,7 +13,7 @@ export default function Params() {
       <h1>
         Rotas Params: {id} e {nome}{" "}
       </h1>
-      <Link href={"/rotas"}>
+      <Link href={"/rotas"} passHref>
         <button> Voltar </button>
       </Link>
     </div>

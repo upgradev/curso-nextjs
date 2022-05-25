@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Estatico2(props) {
+export default function Estatico3(props) {
   return (
     <div>
-      <h1>Estático #02</h1>
+      <h1>Estático #03</h1>
       <h2>{props.numero}</h2>
     </div>
   );
@@ -11,6 +11,7 @@ export default function Estatico2(props) {
 
 export function getStaticProps() {
   return {
+    revalidate: 7, //segundos
     props: {
       numero: Math.random(),
     },
