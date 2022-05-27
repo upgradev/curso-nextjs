@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Estatico4(props) {
+export default function Dinamico2(props) {
   console.log("[Cliente] renderizando o componente...");
 
   function renderizarProdutos() {
@@ -15,13 +15,13 @@ export default function Estatico4(props) {
 
   return (
     <div>
-      <h1>Estático #04</h1>
+      <h1>Dinâmico #02</h1>
       <ul>{renderizarProdutos()}</ul>
     </div>
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   console.log("[Server] gerando props para o componente"); //do lado do servidor
 
   const resp = await fetch("http://localhost:3000/api/produtos");
